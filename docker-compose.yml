@@ -1,0 +1,40 @@
+version: '3'
+
+volumes:
+    phpsocket:
+
+services:
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    ports:
+      - '80:80'
+    volumes:
+      - ~/MountPoint/docker/home:/home/docker
+      - phpsocket:/var/run
+    depends_on:
+      - php
+
+  php:
+    container_name: php
+    build: ./php
+    ports:
+      - '9000:9000'
+    volumes:
+      - ~/Work/MountPoint/docker/home:/home/docker
+      - phpsocket:/var/run
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: hoge
+      MYSQL_USER: fuga
+      MYSQL_PASSWORD: docker#DOCKER1234
+      MYSQL_ROOT_PASSWORD: docker#DOCKER1234
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~/Work/MountPoint/docker/db/data:/var/lib/mysql
