@@ -10,7 +10,7 @@ services:
     ports:
       - '80:80'
     volumes:
-      - ./mount:/home/docker
+      - ./src:/home/docker
       - phpsocket:/var/run
     depends_on:
       - php
@@ -21,7 +21,7 @@ services:
     ports:
       - '9000:9000'
     volumes:
-      - ./mount:/home/docker
+      - ./src:/home/docker
       - phpsocket:/var/run
     depends_on:
       - db

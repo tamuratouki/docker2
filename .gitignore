@@ -1,4 +1,4 @@
 .DS_Store
 .docker/
 /db
-/mount/.bash_history
+/src/.bash_history
