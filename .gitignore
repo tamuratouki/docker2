@@ -1,5 +1,17 @@
-.DS_Store
-.docker/
-/db
-/src/*
-!/src/laravel
+/ node_modules
+/パブリック/ホット
+/パブリック/ストレージ
+/ストレージ/ * .key
+/ベンダー
+/ .idea
+/ .vscode
+/ .vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+糸-error.log
+.env
+/ _ide_helper.php
+/ _ide_helper_models.php
+/ .phpstorm.meta.php
+.phpunit.result.cache
