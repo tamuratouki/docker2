@@ -17,44 +17,81 @@ class CustomerController extends Controller
     {
         return view('customer.index');
     }
-        public function search (Request $request):View
-            {
-                return view('customer.index');
-            }
 
-                public function create(Request $request) : View
-                    {
-                        return view('customer.create');
-                    }
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function search (Request $request):View
+    {
+        return view('customer.index');
+    }
 
-                        public function detail(Request $request): View
-                            {
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function create(Request $request) :View
+    {
+        return view('customer.create');
+    }
 
-                            }
-                            public function edit(Request $request) : View
-                                {
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function detail(Request $request):View
+    {
 
-                                }
-                                public function store(Request $request):RedirectResponse
-                                {
-                                    return redirect()->('customer_index');
-                                }
-                                    public function updata(Request $request):RedirectResponse
-                                    {
-                                        return redirect()->('customer_index');
-                                    }
-                                        public function delete(Request $request):RedirectResponse
-                                        {
-                                            return redirect()->('customer_index');
-                                        }
+    }
 
+    /**
+    * Undocumented function
+    *
+    * @param Request $request
+    * @return View
+    */
+    public function edit(Request $request) :View
+    {
 
+    }
 
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function store(Request $request):RedirectResponse
+    {
+        return redirect()->route('customer_index');
+    }
 
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function updata(Request $request):RedirectResponse
+    {
+        return redirect()->route('customer_index');
+    }
 
-
-
-
-
-
+    /**
+     * Undocumented function
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function delete(Request $request):RedirectResponse
+    {
+        return redirect()->route('customer_index');
+    }
 }
