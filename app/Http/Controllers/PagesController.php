@@ -11,3 +11,4 @@ class PagesController extends Controller
                 $last_name = "Skywalker";
         return view('pages.about', compact('first_name', 'last_name'));
 }
+    }

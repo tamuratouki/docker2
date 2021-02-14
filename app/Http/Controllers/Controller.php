@@ -9,6 +9,10 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
+    public function contact()  // 追加
+    {
+        return'cuntact';
+    }
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
         public function about() {
             return view('pages.about');
