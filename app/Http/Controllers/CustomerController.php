@@ -35,7 +35,7 @@ class CustomerController extends Controller
      * @param Request $request
      * @return View
      */
-    public function create(Request $request):view
+    public function create(Request $request):View
     {
         return view('customer.create');
     }
@@ -46,9 +46,9 @@ class CustomerController extends Controller
      * @param Request $request
      * @return View
      */
-    public function detail(Request $request):view
+    public function detail(Request $request):View
     {
-
+        return view('customer.detail');
     }
 
     /**
@@ -57,9 +57,9 @@ class CustomerController extends Controller
     * @param Request $request
     * @return View
     */
-    public function edit(Request $request):
+    public function edit(Request $request):View
     {
-
+        return view('customer.edit');
     }
 
     /**
