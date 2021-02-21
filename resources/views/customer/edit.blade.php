@@ -30,7 +30,9 @@
                     【メッセージサンプル】エラーです。
                 </div>
 
-                <form id="form" method="post" action="{{ route('customer_edit') }}">
+                <form id="form" method="post" action="{{ route('customer_update') }}">
+                    @csrf
+                    <input type="hidden" name="id" value="1" />
                     <div class="col-md-8 order-md-1">
                         <div class="row">
                             <div class="col-md-3 mb-3">

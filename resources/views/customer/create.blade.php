@@ -31,7 +31,8 @@
                 </div>
 
 
-                <form id="form" method="post" action="{{ route('customer_create') }}">
+                <form id="form" method="post" action="{{ route('customer_store') }}">
+                    @csrf
                     <div class="col-md-8 order-md-1">
                         <div class="row">
                             <div class="col-md-3 mb-3">
@@ -141,7 +142,6 @@
                 </form>
                 <hr class="mb-4">
                 <div class="form-group">
-                    <form id="form" method="post" action="{{ route('customer_store') }}">
                     <button id="complete" type="button" class="btn btn-success" style="width:150px"><i class="fas fa-database pr-1"></i> 登録</button>
                 </div>
             </div>

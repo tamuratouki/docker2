@@ -79,7 +79,7 @@ class CustomerController extends Controller
      * @param Request $request
      * @return RedirectResponse
      */
-    public function updata(Request $request):RedirectResponse
+    public function update(Request $request):RedirectResponse
     {
         return redirect()->route('customer_index');
     }
