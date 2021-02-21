@@ -81,7 +81,7 @@
                             【メッセージサンプル】該当データが見つかりません。
                         </div>
                         <div class="form-group row">
-                            <a  class="btn btn-success" href="create.html" style="width:150px"><i class="fas fa-chalkboard-teacher pr-1"></i> 新規登録</a>
+                            <form id="form" method="post" action="{{ route('customer_create') }}"><i class="fas fa-chalkboard-teacher pr-1"></i> 新規登録</a>
                         </div>
                     </div>
 

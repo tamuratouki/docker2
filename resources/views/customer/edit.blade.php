@@ -140,7 +140,7 @@
                 </form>
                 <hr class="mb-4">
                 <div class="form-group">
-                    <a  class="btn btn-secondary" href="index.html" style="width:150px">戻る</a>
+                    <form id="form" method="post" action="{{ route('customer_update') }}">
                     <button id="complete" type="button" class="btn btn-info" style="width:150px"><i class="fas fa-database pr-1"></i> 更新</button>
                 </div>
             </div>

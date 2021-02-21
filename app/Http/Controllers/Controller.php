@@ -14,7 +14,8 @@ class Controller extends BaseController
         return'cuntact';
     }
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-        public function about() {
+        public function about()
+         {
             return view('pages.about');
         }
-    }
+}

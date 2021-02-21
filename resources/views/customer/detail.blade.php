@@ -17,9 +17,9 @@
         <header>
             <div class="navbar navbar-dark bg-dark shadow-sm">
                 <div class="container d-flex justify-content-between">
-                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <form id="form" method="post" action="{{ route('customer_detail') }}">
                         <strong>顧客管理（詳細）</strong>
-                    </a>
+
                 </div>
             </div>
         </header>
