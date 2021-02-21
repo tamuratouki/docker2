@@ -17,7 +17,7 @@
         <header>
             <div class="navbar navbar-dark bg-dark shadow-sm">
                 <div class="container d-flex justify-content-between">
-                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <a href="{{ route('customer_index') }}" class="navbar-brand d-flex align-items-center">
                         <strong>顧客管理（編集）</strong>
                     </a>
                 </div>
@@ -140,7 +140,7 @@
                 </form>
                 <hr class="mb-4">
                 <div class="form-group">
-                    <form id="form" method="post" action="{{ route('customer_update') }}">
+                    <a class="btn btn-secondary" href="{{ route('customer_index') }}" style="width:150px">戻る</a>
                     <button id="complete" type="button" class="btn btn-info" style="width:150px"><i class="fas fa-database pr-1"></i> 更新</button>
                 </div>
             </div>
