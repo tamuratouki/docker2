@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use App\Customer;
+use App\Pref;
 
 class CustomerController extends Controller
 {
@@ -56,9 +57,10 @@ class CustomerController extends Controller
     public function create(Request $request):View
     {
         //都道府県を全て取得する。
+          $prefs = Pref::all();
 
         //画面に渡す
-        return view('customer.create');
+        return view('customer.create',['prefs' => $prefs]);
     }
 
     /**
