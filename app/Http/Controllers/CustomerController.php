@@ -17,7 +17,7 @@ class CustomerController extends Controller
     public function index():View
     {
         //顧客を全て取得する
-        $costomers = Costomer::all();
+        $costomers = Customer::all();
 
         //画面に渡す
         return view('customer.index', ['costomers' => $costomers]);
