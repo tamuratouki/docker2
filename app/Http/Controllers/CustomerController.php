@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use App\Customer;
 
 class CustomerController extends Controller
 {
@@ -16,9 +17,10 @@ class CustomerController extends Controller
     public function index():View
     {
         //顧客を全て取得する
+        $costomers = Costomer::all();
 
         //画面に渡す
-        return view('customer.index');
+        return view('customer.index', ['costomers' => $costomers]);
     }
 
     /**
