@@ -91,8 +91,9 @@
                                 <label for="prefId">都道府県 <span class="badge badge-danger">必須</span></label>
                                 <select class="custom-select d-block w-100" name="pref_id" required>
                                     <option value=""></option>
-                                    <option value="1">北海道</option>
-                                    <option value="2">青森県</option>
+                                    @foreach($prefs as $pref)
+                                    <option value="{{ $pref->id }}">{{ $pref->name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -142,6 +143,7 @@
                 </form>
                 <hr class="mb-4">
                 <div class="form-group">
+                    <a  class="btn btn-secondary" href="{{ route('customer_index') }}" style="width:150px">戻る</a>
                     <button id="complete" type="button" class="btn btn-success" style="width:150px"><i class="fas fa-database pr-1"></i> 登録</button>
                 </div>
             </div>
