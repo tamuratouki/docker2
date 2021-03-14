@@ -35,11 +35,11 @@ class CustomerController extends Controller
         //画面から検索条件を受け取る
 
         //姓かなが入力されていたら、検索に含める
-           
+
         //名かなが入力されていたら、検索に含める
-          
+
         //性別はチェックされたものを、検索に含める
-           
+
         //都道府県が選択されたら、検索に含める
 
         //上記の検索条件で検索結果を取得する
@@ -72,7 +72,7 @@ class CustomerController extends Controller
     public function detail(Request $request):View
     {
         //画面から詳細表示対象を取得する
-　　　　　　＄requests ->id
+　　　　　　
         //詳細表示する顧客を検索する
 
         //画面に渡す
@@ -122,7 +122,7 @@ class CustomerController extends Controller
         //画面から更新内容を受け取る
 
         //更新対象の顧客を検索する
-         $Customer -> 
+
         //顧客を更新する
 
         //顧客一覧に戻って、更新しましたメッセージを表示する
