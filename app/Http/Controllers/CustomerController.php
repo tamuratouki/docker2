@@ -72,11 +72,11 @@ class CustomerController extends Controller
     public function detail(Request $request):View
     {
         //画面から詳細表示対象を取得する
-
+        $id = $request->id;
         //詳細表示する顧客を検索する
-
+        $costomer = Customer::findOrFail($id);
         //画面に渡す
-        return view('customer.detail');
+        return view('customer.detail', ['costomer' => $costomer]);
     }
 
     /**

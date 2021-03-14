@@ -30,7 +30,7 @@
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label for="lastName">姓</label>
-                            <input type="text" class="form-control" name="last_name" placeholder="姓" value="苗字" readonly>
+                            <input type="text" class="form-control" name="last_name" placeholder="姓" value="{{ $costomer->last_name }}" readonly>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="firstName">名</label>
