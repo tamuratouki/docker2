@@ -72,7 +72,7 @@ class CustomerController extends Controller
     public function detail(Request $request):View
     {
         //画面から詳細表示対象を取得する
-　　　　　　
+
         //詳細表示する顧客を検索する
 
         //画面に渡す

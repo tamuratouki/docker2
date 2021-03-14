@@ -109,21 +109,20 @@
                                 @foreach($costomers as $costomer)
                                 <tr>
                                     <td scope="col">{{ $costomer->id }}</td>
-                                    <td scope="col"><a href="{{ route('customer_detail', ['id' => 1]) }}">苗字　名前</a></td>
-                                    <td scope="col">みょうじ なまえ</td>
-                                    <td scope="col">男</td>
-                                    <td scope="col">1973/01/24</td>
-                                    <td scope="col">123-4567</td>
-                                    <td scope="col">{{ $costomer->name　}}</td>
-                                    <td scope="col">03-1234-5678</td>
-                                    <td scope="col">080-1234-5678</td>
-                                    <td scope="col">bobtabo.buhibuhi@gmail.com</td>
-                                    <td scope="col">2020/08/30　23：12：34</td>
-                                    <td scope="col">2020/08/30　23：12：34</td>
-                                    <td scope="col"><a class="btn btn-info" href="{{ route('customer_edit', ['id' => 1]) }}">編集</a></td>
+                                    <td scope="col"><a href="{{ route('customer_detail', ['id' => $costomer->id]) }}">{{ $costomer->last_name }}　{{ $costomer->first_name }}</a></td>
+                                    <td scope="col">{{ $costomer->last_kana }} {{ $costomer->first_kana }}</td>
+                                    <td scope="col">{{ $costomer->gender == 1 ? "男" : "女" }}</td>
+                                    <td scope="col">{{ $costomer->birthday->format('Y/m/d') }}</td>
+                                    <td scope="col">{{ $costomer->post_code }}</td>
+                                    <td scope="col">{{ $costomer->pref->name }}</td>
+                                    <td scope="col">{{ $costomer->tel }}</td>
+                                    <td scope="col">{{ $costomer->mobile }}</td>
+                                    <td scope="col">{{ $costomer->email }}</td>
+                                    <td scope="col">{{ $costomer->created_at }}</td>
+                                    <td scope="col">{{ $costomer->updated_at }}</td>
+                                    <td scope="col"><a class="btn btn-info" href="{{ route('customer_edit', ['id' => $costomer->id]) }}">編集</a></td>
                                 </tr>
-
-                                
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
